@@ -41,30 +41,32 @@ console.log(mails);
 let verifica = false
 
 //apro un ciclo for il cui punto di partenza è la posizione 0 e, incremenando, il punto arrivo è la posizione dell'ultimo elemento
-for (let i=0; i<=mails.length;i++){
+for (let i=0; i<=mails.length -1 ;i++){
 
     //SE uno degli elementi dell'array è uguale all'email scritta dall'utente
     if (mails[i]===your_email){
 
         //ALLORA la variabile di verifica ci darà true
         verifica=true
-        console.log(verifica);
     }
-    //ALTRIMENTI 
-    else {
-
-        //la variabile di verifica ci darà false
-        verifica=false
-        console.log(verifica);
-        
-    }
+    
+}
+//SE è true 
+if (verifica){
+    //ALLORA 
+    console.log("Puoi entrare");
+    
+}
+//ALTRIMENTI
+else{
+    console.log("Non puoi entrare");
 }
 
                          //GIOCO DEI DADI
 //creiamo una variabile che darà un numero random al PC da 1 a 6
-const random_pc= Math.ceil(Math.random() * 6);
+const random_pc= Math.floor(Math.random() * 6 + 1);
 //creiamo una variabile che darà un numero random all'utente da 1 a 6
-const random_user= Math.ceil(Math.random() * 6);
+const random_user= Math.floor(Math.random() * 6 + 1 );
 //variabile per scrivere il messaggio all'interno dell'if/else
 let message
 //SE il numero random del PC e maggiore di quello dell'utente
