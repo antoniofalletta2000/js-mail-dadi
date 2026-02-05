@@ -28,6 +28,8 @@ torniamo a scrivere in italiano
 proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
 */
 
+                       //MAIL
+
 //variabile per l'utente in cui deve scrivere la propria email
 const your_email= (prompt("type your email"))
 
@@ -50,10 +52,36 @@ for (let i=0; i<=mails.length;i++){
     }
     //ALTRIMENTI 
     else {
-        
+
         //la variabile di verifica ci darà false
         verifica=false
         console.log(verifica);
         
     }
 }
+
+                         //GIOCO DEI DADI
+//creiamo una variabile che darà un numero random al PC da 1 a 6
+const random_pc= Math.ceil(Math.random() * 6);
+//creiamo una variabile che darà un numero random all'utente da 1 a 6
+const random_user= Math.ceil(Math.random() * 6);
+//variabile per scrivere il messaggio all'interno dell'if/else
+let message
+//SE il numero random del PC e maggiore di quello dell'utente
+if (random_pc>random_user){
+    //ALLORA il PC è il vincitore
+    message = "The winner is.... PC!!!"
+    
+} 
+//ALTRIMENTI SE il numero random dell'utente e maggiore di quello del PC
+else if (random_pc<random_user){
+    //ALLORA l'utente è il vincitore
+    message = "The winner is.... user!!!"
+} 
+//ALTRIMENTI (i numeri sono uguali)
+else{
+    //sarà un pareggio
+    message = "It is a draw"
+}
+//stampiamo alla fine sia il numero random del pc, sia quello dell'utente, sia l'esito della partita in un unico log
+console.log(random_pc,random_user, message);
