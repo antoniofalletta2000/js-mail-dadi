@@ -30,22 +30,27 @@ proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro program
 
 //variabile per l'utente in cui deve scrivere la propria email
 const your_email= (prompt("type your email"))
+
 //creo un array con tot email 
 const mails = ["Antonio@gmail.com","Larisa@gmail.com", "Pietro@gmail.com", "Paolo@gmail.com"]
 console.log(mails);
+
 //creo una variabile let con un valore booleano che cambierà in base alla veridicità dell'email scritta dall'utente
 let verifica = false
+
 //apro un ciclo for il cui punto di partenza è la posizione 0 e, incremenando, il punto arrivo è la posizione dell'ultimo elemento
 for (let i=0; i<=mails.length;i++){
+
     //SE uno degli elementi dell'array è uguale all'email scritta dall'utente
     if (mails[i]===your_email){
+
         //ALLORA la variabile di verifica ci darà true
         verifica=true
         console.log(verifica);
-        
     }
     //ALTRIMENTI 
     else {
+        
         //la variabile di verifica ci darà false
         verifica=false
         console.log(verifica);
